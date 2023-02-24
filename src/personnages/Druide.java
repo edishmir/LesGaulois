@@ -46,7 +46,7 @@ public class Druide {
     public static void main(String[] args) {
         Druide panoramix = new Druide("Panoramix", 5, 10);
         panoramix.preparerPotion();
-        Gaulois obelix = new Gaulois("Obélix", 25000);
+        Gaulois obelix = new Gaulois("Obélix", 50);
         panoramix.booster(obelix);
     }
 }
