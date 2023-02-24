@@ -20,10 +20,33 @@ public class Druide {
     }
 
     public void parler(String texte) {
-        System.out.println(prendreParole() + "<< " + texte + " >>");
+        System.out.println(prendreParole() + "<< " + texte + ">>");
     }
 
     private String prendreParole() {
         return "Le Druide " + nom + " : ";
+    }
+
+    public void preparerPotion(){
+        Random objet = new Random();
+        forcePotion = objet.nextInt(effetPotionMin, effetPotionMax);
+        if (forcePotion > 7) {
+            parler("J'ai préparé une super potion de force " + forcePotion + ".");
+        } else {
+            parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion + ".");
+        }
+    }
+
+    public void booster(Gaulois gaulois){
+        if (gaulois.getNom() == "Obélix"){
+            parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+        }
+    }
+
+    public static void main(String[] args) {
+        Druide panoramix = new Druide("Panoramix", 5, 10);
+        panoramix.preparerPotion();
+        Gaulois obelix = new Gaulois("Obélix", 25000);
+        panoramix.booster(obelix);
     }
 }
