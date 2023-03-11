@@ -22,17 +22,20 @@ public class Romain {
     }
 
     public void recevoirCoup(int forceCoup) {
+        assert force>0: "la force d'un Romain est positive";
+        int force_avant = force;
         force -= forceCoup;
         if (force > 0) {
             parler("Aïe");
         } else {
             parler("J'abandonne...");
         }
+        int force_apres = force;
+        assert force_apres<force_avant: "la force d'un Romain a diminué";
     }
 
     public static void main(String[] args) {
-        Romain cesar = new Romain("César", 8);
-        cesar.parler("Tu vas le regretter Astérix!");
-        cesar.recevoirCoup(7);
+        Romain minus = new Romain("Minus", -6);
+        assert minus.force>0: "la force d'un Romain est toujours positive";
     }
 }

@@ -49,5 +49,4 @@ public class Village {
         village.ajouterHabitant(obelix);
         village.afficherVillageois();
     }
-
 }
