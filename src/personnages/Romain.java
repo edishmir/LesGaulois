@@ -32,7 +32,7 @@ public class Romain {
 	
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
-		minus.parler("Bonjour, je m'appelle Minus.");
+		minus.parler("Bonjour.");
 		minus.recevoirCoup(8);
 	}
 }
