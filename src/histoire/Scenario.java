@@ -19,12 +19,12 @@ public class Scenario {
 		Gaulois obelix = new Gaulois("Obélix", 25);
 		panoramix.booster(obelix);
 		obelix.parler("Par Bélénos, ce n'est pas juste!");
-		Gaulois asterix = new Gaulois("Astérix", 6);
+		Gaulois asterix = new Gaulois("Astérix", 8);
 		panoramix.booster(asterix);
 		asterix.parler("Bonjour");
-		Romain minus = new Romain("Minus", 25);
+		Romain minus = new Romain("Minus", 6);
 		minus.parler("UN GAU... UN GAUGAU...");
-		for (int i=0; i<3; i++) asterix.frapper(minus);
+		asterix.frapper(minus);
 	}
 
 }
